@@ -1,7 +1,7 @@
 import React, { usestate } from 'react';
 
 const Character = props => {
-    // const [character] = useState({char.data.obj})
+    const [character] = useState(props.character)
     return (
         <div>
             <h2>character.name</h2>

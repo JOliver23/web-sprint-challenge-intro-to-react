@@ -7,13 +7,15 @@ function CharGrid() {
 
     useEffect(() => {
         axios.get('https://rickandmortyapi.com/api/character/')
-        .then(response => console.log("api request: ", response))
+        .then(response => setAPIData(response.data.results))
         .catch(err => console.log("error: ", err))
     }, [])
 
     return (
         <div>
-            
+            {apiData.map(characterObj => {
+                return <Character key={characterObj.id} character={charcterObj} />
+            })}
         </div>
     )
 };

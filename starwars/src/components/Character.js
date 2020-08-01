@@ -1,15 +1,16 @@
-import React, { usestate } from 'react';
+import React, { useState } from 'react';
 
 const Character = props => {
     const [character] = useState(props.character)
     return (
         <div>
-            <h2>character.name</h2>
-            <img src="{character.img}" />
+            <h2>{character.name}</h2>
+            <img src={character.image} />
             <div className="character-info">
-                <p>age</p>
-                <p>info</p>
-                <p>more info</p>
+                <p>Species: {character.species}</p>
+                <p>Gender: {character.gender}</p>
+                <p>Location: {character.location.name}</p>
+                <p>Status: {character.status}</p>
             </div>
         </div>
     )

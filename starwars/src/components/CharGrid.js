@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Character from './Character';
+import { GridDiv } from './StyledComps';
 
 function CharGrid() {
     const [apiData, setAPIData] = useState([])
@@ -12,11 +13,11 @@ function CharGrid() {
     }, [])
 
     return (
-        <div>
+        <GridDiv>
             {apiData.map(characterObj => {
                 return <Character key={characterObj.id} character={characterObj} />
             })}
-        </div>
+        </GridDiv>
     )
 };
 

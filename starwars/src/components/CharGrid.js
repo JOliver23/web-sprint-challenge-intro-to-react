@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Character } from './Character';
 
 function CharGrid() {
     const [apiData, setAPIData] = useState([])

@@ -5,7 +5,7 @@ const Character = props => {
     return (
         <div>
             <h2>character.name</h2>
-            <img src={character.img} />
+            <img src="{character.img}" />
             <div className="character-info">
                 <p>age</p>
                 <p>info</p>
